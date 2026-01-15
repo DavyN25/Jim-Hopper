@@ -6,16 +6,59 @@ Rui Parreira
 Davy Goupil 
 Ghazal Hassanzadeh
 
-## Project Overview
+# Project Overview
+
+This project uses the UCI Bike Sharing Dataset (Capital Bikeshare, 2011–2012) to forecast daily bike rental demand using weather, seasonal, and calendar features. The goal is to help a new bike-sharing startup make data-driven decisions about launch timing, initial capacity, and operational risk. The team compares several machine learning models and finds that ensemble methods, such as Random Forest, outperform simple linear models for predicting demand. The results support strategic planning by highlighting key demand drivers (especially temperature) and identifying high- and low-demand periods across the year. 
+
+## Introduction
+
+Bike-sharing systems have become an increasingly important component of sustainable urban mobility, offering flexible and environmentally friendly transportation options in cities worldwide. For a new bike-sharing startup, entering a market involves significant uncertainty — particularly regarding demand levels, seasonal fluctuations, and operational risk. Decisions such as when to launch, how many bikes to deploy, and how sensitive demand is to external conditions must often be made before any internal historical data is available.
+
+This project explores how historical bike-sharing data can be leveraged to support data-driven decision-making for new market entrants. Using daily bike rental data combined with weather, seasonal, and calendar information, the goal is to understand demand patterns and develop a machine learning model capable of predicting daily bike rental demand. Such predictions can help a startup assess market viability, anticipate periods of high and low demand, and plan initial capacity more effectively.
+
+By focusing on daily demand forecasting, this project balances predictive accuracy with interpretability and business relevance. The analysis follows a structured machine learning workflow including data cleaning, exploratory data analysis, feature engineering, and model development. The findings are interpreted from a business perspective, highlighting how predictive analytics can reduce uncertainty and support strategic planning for a bike-sharing startup.
 
 
-- **Objective:**   
-- **Approach:**   
-- **Dataset:** 
+## Research Questions & Business Objectives
 
-## Final project presentation
-The results from the analysis can be found in the presentation slides of the project:
+To support a data-driven market entry strategy for a new bike-sharing startup, this project focuses on understanding demand patterns, operational risks, and strategic timing. The following research questions guide the analysis and modeling process:
 
+---------------------------------
+### RQ1: Key Demand Drivers & Weather Sensitivity
+
+Business Objective: Identify the factors that most strongly influence bike rental demand.
+Research Question: Which weather and seasonal factors most strongly influence daily bike rental demand, and how sensitive is demand to changes in temperature, humidity, and wind speed?
+
+-----------------------------------
+### RQ2: High vs Low Demand Periods (Risk Awareness)
+
+Business Objective: Reduce operational and financial risk by identifying demand extremes.
+Research Question: Can periods of high and low demand be identified and characterized based on predicted daily bike rentals?
+
+-----------------------------------
+### RQ3: Optimal Market Entry Timing
+
+Business Objective: Support strategic launch planning for a new bike-sharing service.
+Research Question: When is the optimal time of year to launch a bike-sharing service to maximize early adoption?
+
+-----------------------------------
+### RQ4: Capacity Planning & Usage Patterns
+
+Business Objective: Provide guidance for initial bike deployment and operational planning.
+Research Question: How many bikes should be deployed on a typical day to avoid shortages or overcapacity, and how do demand patterns differ between weekdays and weekends?
+
+
+## Dataset Selection 
+
+We used the Bike Sharing Dataset from the Capital Bikeshare system (2011–2012), which includes hourly and daily counts of rental bikes along with weather and seasonal variables.
+
+https://archive.ics.uci.edu/dataset/275/bike+sharing+dataset
+
+It contains 17,389 instances and 13 features, making it suitable for regression tasks.
+The dataset was mostly clean, but we performed additional cleaning by removing unnecessary columns for model training.
+
+
+# Workflow
 
 ## Tools & Libraries
 - Python 3  
@@ -23,75 +66,101 @@ The results from the analysis can be found in the presentation slides of the pro
 - NumPy (numerical operations)   
 - Trello (project management)  
 - GitHub (collaboration)
+- Slack Group (Communication)
+- Libraries for machine learning in Python
 
 
-
-## Day 1 - Project Initiation & Data Selection
-On Day 1 we focused selecting the database and analysing 
-
-### 1. Introduction of the Project 
-
-What we are, and what will do
-
-
-
-
-### 2. Dataset Selection
-
-We used the database fir Bike Sharing
-This dataset contains the hourly and daily count of rental bikes between years 2011 and 2012 in Capital bikeshare system with the corresponding weather and seasonal information.
-
-https://archive.ics.uci.edu/dataset/275/bike+sharing+dataset
-
-It have 17.389 Instances and 13 Features, so we can test it on Regression tasks. 
-
-**Dataset Features:**
-- 
-
-This dataset is useful for market research, such as identifying the best-performing genres and the highest revenue segments.
-
-### 3. Data Transformation
-The original dataset was almost clean, but we cleaned it using several techniques, then saved each function in a different .py file to apply later. 
-
-
-### 4. Created a Kanban Board for Project Management Purposes on Trello.
-We organized the tasks between before and after lunch for the whole week. 
+### 1. Project Management
+We created a Kanban board on Trello to organize tasks throughout the week:
 https://trello.com/b/6FVof5jE/jimhopper
 
-
-
-### 5. Created a Github Repository for the Project:
+### 2. GitHub Repository
+Our main repository is here:
 https://github.com/DavyN25/Jim-Hopper
 
-We created the repository and defined the collaboration status for all group members. We use branch and merge techniques, so all files are always updated. We have practiced working collaboratively on the repository.
+We practiced collaboration through branching, merging, and regular updates.
 
-## Day 2 – 
+### 3. Final project presentation
+The results of our analysis are available in the project presentation:
+https://docs.google.com/presentation/d/1oWkrltrtDz9xgZqZ8cStePZL4h0kxAryEGfsRMhdTBc/edit?usp=sharing
 
-
-
-## Day 3/4 – Conclusions & Assembling Report
-
-
-### 1. Data Transformation
+This project strengthened our ability to perform collaborative data analysis, reason from an investment perspective, and train machine learning models in Python.
 
 
+# Project Chronology 
 
-### 2. Analysis & Conclusions
+## Day 1 - Project Initiation & Data Selection
+Selected the dataset and analyzed its structure for machine learning suitability
+
+## Day 2 – Clean and wrangle data 
+On Day 2 we cleanead the data, choosing the collumns suitable for Machine Learning models.
+Cleaned the data, selecting columns suitable for machine learning models.
+
+Began feature engineering:
+Label encoding
+Feature scaling and selection
+Used KNN for initial testing (80/20 train-test split).
 
 
-### 3. Challenges in the Project
+## Day 3 - Supervised Learning
+Refined our models using:
+Linear Regression (80/20 split)
+Decision Tree Regressor
+KNN
 
+Began drafting the presentation on Canvas.
+
+
+## Day 4
+Focused on model fine-tuning. Removed KNN due to poor performance.
+Re-split the dataset into categorical and numerical columns, applied One-Hot Encoding, and focused on Linear Regression, Decision Tree and Random Forest.
+Performed hyperparameter tuning with Grid Search.
 
 
 ## Day 5 – Project Presentation
-On Day 5 we presented our findings and pitched the business plan. 
-We finish the final code, with legends about the code to fill best practises learnings. 
+Presented our findings and proposed a business plan based on the forecasts.
+
+
+## Analysis & Conclusions
+
+### Key Findings and Insights
+
+Temperature is the most important driver of bike demand.
+
+Ensemble models (e.g., Random Forest) outperform linear models.
+
+Weather variables like humidity and wind influence demand, but less than temperature.
+
+Calendar features (season, weekday) affect demand stability rather than daily spikes.
+
+
+### Future Work and Improvements
+The dataset could be expanded with business-oriented features such as:
+
+Rental price and earnings
+
+Revenue per rental and profit margin
+
+Price elasticity indicators
+
+Adding location-level data (station or neighborhood) could allow:
+
+Identification of high-demand hotspots
+
+Optimized bike allocation per area
+
+With more time, we could test alternative models, perform deeper hyperparameter tuning, and provide sharper insights into optimal launch timing.
 
 
 
-### 2. Final project presentation
-The results from the analysis can be found in the presentation slides of the project:
-https://docs.google.com/presentation/d/1oWkrltrtDz9xgZqZ8cStePZL4h0kxAryEGfsRMhdTBc/edit?usp=sharing
+## Challenges in the Project
 
-This project helped our team practice collaborative data analysis, investment reasoning, and Python-based visualization while exploring key trends in the global gaming industry.
+Choosing the most appropriate predictive model.
+
+Dealing with columns that caused overfitting.
+
+Initially not separating categorical and numerical features properly.
+
+Some models showed inconsistent or illogical predictions.
+
 
