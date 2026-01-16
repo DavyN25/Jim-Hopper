@@ -82,7 +82,7 @@ We practiced collaboration through branching, merging, and regular updates.
 
 ### 3. Final project presentation
 The results of our analysis are available in the project presentation:
-https://docs.google.com/presentation/d/1oWkrltrtDz9xgZqZ8cStePZL4h0kxAryEGfsRMhdTBc/edit?usp=sharing
+https://www.canva.com/design/DAG-OKs7TJ4/xlmRsiYz9Sl9f7WkWXvRKg/edit
 
 This project strengthened our ability to perform collaborative data analysis, reason from an investment perspective, and train machine learning models in Python.
 
